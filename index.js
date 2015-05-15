@@ -12,7 +12,7 @@ module.exports = {
 		this._super.included(app);
 		
 		this.app.import(app.bowerDirectory + '/datatables/media/js/jquery.dataTables.js');
-		this.app.import(app.bowerDirectory + '/datatables/media/css/jquery.dataTables.css');
+		//this.app.import(app.bowerDirectory + '/datatables/media/css/jquery.dataTables.css');
 		
 		//include shim
 		/*this.app.import('vendor/ember-jquery-datatables/shim.js', {

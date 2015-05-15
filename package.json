@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-jquery-datatables",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "jQuery DataTables ember-cli addon.",
   "directories": {
     "doc": "doc",
