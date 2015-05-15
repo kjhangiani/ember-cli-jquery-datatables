@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-jquery-datatables",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.1.0",
+  "description": "jQuery DataTables ember-cli addon.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,7 +11,10 @@
     "build": "ember build",
     "test": "ember test"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kjhangiani/ember-cli-jquery-datatables.git"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
@@ -33,12 +36,25 @@
     "ember-disable-prototype-extensions": "^1.0.0"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+		"jquery-datatables",
+		"datatables",
+		"ember-cli-addon"
   ],
   "dependencies": {
     "ember-cli-babel": "^4.0.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
-  }
+  },
+	"_npmUser": {
+    "name": "kjhangiani",
+    "email": "kevinjh@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "kjhangiani",
+      "email": "kevinjh@gmail.com"
+    }
+  ]
 }
