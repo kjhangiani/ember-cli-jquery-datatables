@@ -83,10 +83,7 @@ module.exports = {
 				}
 			});
 			
-			console.log(packages);
-			console.log(app.bowerDirectory);
 			packages.forEach(function(pkg) {
-				console.log(pkg);
 				this.app.import(app.bowerDirectory + '/' + pkg);
 			}, this);
 			
