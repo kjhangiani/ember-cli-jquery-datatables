@@ -17,29 +17,43 @@ Note that if you are manipulating the table (adding/updating/deleting rows) whil
 
 ## Configuration
 
-Add the assets you want to import to your Brocfile
+Add the assets you want to import to your Brocfile.  
+
+Use the `extensions` configuration option to specify which extensions to load. By default, the extensions will load their associated css based on the global `style` configuration option, but this behavior can be overriden by passing an object instead of a string into the extensions array.  
+
+The `buttons` extension also supports additional configuration options for loading buttons.  This extension also requires additional libraries for some button types.  These libraries can be included via the addon, or manually included in your app.  See the datatables documentation for which libraries are required on the various button types.
+
+The following example will exclude css for the 'autofill' extension, will specify 'dt' css for the responsive extension, and will load additional button types.  It will also load the jszip library.
 
 ```
 /* Brocfile.js */
 var app = new EmberApp({
 	datatables: {
 		core: true,
-		css: 'bs', // false, 'dt', 'bs', 'jqui', or 'zf' for styling (none, datatables, bootstrap, jqueryui, or foundation css)
+		style: 'bs', // false, 'dt', 'bs', 'jqui', or 'zf' for styling (none, datatables, bootstrap, jqueryui, or foundation css)
 		extensions: [
-			'autofill',
-			'buttons', 
+			{ name: 'autofill', style: false },
+			{ name: 'buttons', extensions: ['colVis','flash','html5','print'] },
 			'colreorder',
 			'fixedcolumns',
 			'fixedheader',
 			'keytable',
-			'responsive',
+			{ name: 'responsive', style: 'dt' },
 			'scroller',
 			'select'
-		]
+		],
+		// these libraries are required for some button types
+		pdfmake: false, 
+		vfs_fonts: false, 
+		jszip: true
 	}
 })
 	
 ```
+
+## Known Issues
+
+- The image files for the base datatables css have to be manually imported in your app, as this extension does not include them.  This will be fixed in a future release.
 
 Not all extensions have been tested with ember, so YMMV.  Use with care in production.  Works very well for static tables, but requires more effort for seamless interaction with dynamic tables (ie, table in view while other actions manipulate ember rendered data)
 

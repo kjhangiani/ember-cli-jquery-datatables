@@ -22,6 +22,9 @@ module.exports = {
 		// packages
 		var legacy = 'datatables'; //for compatibility with existing usage, temporary
 		var core = 'datatables.net';
+		var jszip = 'jszip';
+		var pdfmake = 'pdfmake';
+		
 		var styles = [
 			'dt',  //datatables
 			'bs',  //bootstrap
@@ -46,6 +49,10 @@ module.exports = {
 		// datatables core
 		packages.push(legacy);
 		packages.push(core);
+		
+		// dependencies (for buttons)
+		packages.push(pdfmake);
+		packages.push(jszip);
 		
 		// core styles
 		styles.forEach(function(style) {

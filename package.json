@@ -37,17 +37,18 @@
   },
   "keywords": [
     "ember-addon",
-		"jquery-datatables",
-		"datatables",
-		"ember-cli-addon"
+    "jquery-datatables",
+    "datatables",
+    "ember-cli-addon"
   ],
   "dependencies": {
-    "ember-cli-babel": "^4.0.0"
+    "ember-cli-babel": "^4.0.0",
+    "node.extend": "^1.1.3"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
   },
-	"_npmUser": {
+  "_npmUser": {
     "name": "kjhangiani",
     "email": "kevinjh@gmail.com"
   },
